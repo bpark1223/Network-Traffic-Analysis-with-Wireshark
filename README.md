@@ -1,5 +1,5 @@
 # Network-Traffic-Analysis-with-Wireshark
-<p>Network traffic analysis is a crucial part of cybersecurity. Wireshark is a popular network protocol analyzer used to capture and analyze network traffic, which I will do in this project. </p>
+<p>Network traffic analysis is a crucial part of cybersecurity. Wireshark is a popular network protocol analyzer used to capture and analyze network traffic, which I will do in this project. I will also configure display and capture filters </p>
 <h2>Utilities Used</h2>
 </p>- Ubuntu </p>
 </p>- UTM VM setup </p>
@@ -21,6 +21,11 @@
 <img width="957" alt="Screenshot 2024-07-09 at 9 05 21 PM" src="https://github.com/bpark1223/Network-Traffic-Analysis-with-Wireshark/assets/77799235/15aae68c-8c72-4765-baf5-43bfc8a14886">
 </p> Wireshark includes built-in tools for analysis, which we can observe in the Statistics menu. These tools include: protocol hierarchy (to view a breakdown of protocols used in the capture, conversations (to see communication pairs and their traffic statistics), and endpoints (to view traffic statistics for individual endpoints (IP addresses)
 <img width="1081" alt="Screenshot 2024-07-09 at 9 09 03 PM" src="https://github.com/bpark1223/Network-Traffic-Analysis-with-Wireshark/assets/77799235/8dc0d296-aa27-4092-ab07-fa6b4bddc44b">
+</p> I can also configure capture filters, using logical operators to combine multiple filters together. For the below example, I am configuring the filter where the source ip address is set to my ubuntu ip, and the type of packet is icmp </p> 
+<img width="1202" alt="Screenshot 2024-07-14 at 7 32 14 PM" src="https://github.com/user-attachments/assets/bbcbd72d-053b-4253-8956-f3d228bbbd32">
+</p> To test that the packets are being captured, I perform a ping (ping uses icmp protocol) from my terminal on google.com. The packets are now visible in Wireshark. </p>
+<img width="1003" alt="Screenshot 2024-07-14 at 7 56 28 PM" src="https://github.com/user-attachments/assets/54d9a9b0-3a56-477f-a78c-264e017fb85d">
+
 
 
 
