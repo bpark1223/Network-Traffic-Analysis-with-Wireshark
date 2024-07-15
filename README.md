@@ -1,5 +1,5 @@
 # Network-Traffic-Analysis-with-Wireshark
-<p>Network traffic analysis is a crucial part of cybersecurity. Wireshark is a popular network protocol analyzer used to capture and analyze network traffic, which I will do in this project. I will configure display and capture filters  </p>
+<p>Network traffic analysis is a crucial part of cybersecurity. Wireshark is a popular network protocol analyzer used to capture and analyze network traffic, which I will do in this project. I will play around with and configure display/capture filters  </p>
 <h2>Utilities Used</h2>
 </p>- Ubuntu </p>
 </p>- UTM VM setup </p>
@@ -21,6 +21,9 @@
 <img width="1081" alt="Screenshot 2024-07-09 at 9 09 03 PM" src="https://github.com/bpark1223/Network-Traffic-Analysis-with-Wireshark/assets/77799235/8dc0d296-aa27-4092-ab07-fa6b4bddc44b">
 </p> I can use the display filter to output source/destination ip addresses and specific protocols using logical operators. First, I ping google's public ip address (8.8.8.8) and then search for it in Wireshark using the following terminology: </p>
 <img width="1212" alt="Screenshot 2024-07-15 at 3 11 01 PM" src="https://github.com/user-attachments/assets/d2105755-c23f-4099-81ba-97dcbaba181e">
+</p> Another important piece of information that you would typically look for within a local network is DHCP data. I can do this by performing an op scan or network discovery scan using nmap or netdiscover (utility that allows you to discover other ip addresses or hosts on a local network by sending ARP requests and determining whether device is online/offline or on the network/off). From there, I can see the actual arp packet details which include the type of request, hardware type, etc.
+<img width="877" alt="Screenshot 2024-07-15 at 3 54 25 PM" src="https://github.com/user-attachments/assets/a0ec6dfe-d547-4179-a303-44f01ff71af4">
+<img width="1251" alt="Screenshot 2024-07-15 at 4 02 15 PM" src="https://github.com/user-attachments/assets/ab1c35e3-5de8-44a3-8f54-274dde8a12b3">
 
 </p> I can also configure capture filters, using logical operators to combine multiple filters together. For the below example, I am configuring the filter where the source ip address is set to my ubuntu ip, and the type of packet is icmp </p> 
 <img width="1202" alt="Screenshot 2024-07-14 at 7 32 14 PM" src="https://github.com/user-attachments/assets/bbcbd72d-053b-4253-8956-f3d228bbbd32">
