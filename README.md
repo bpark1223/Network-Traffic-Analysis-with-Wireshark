@@ -24,6 +24,16 @@
 </p> Another important piece of information that you would typically look for within a local network is DHCP data. I can do this by performing an op scan or network discovery scan using nmap or netdiscover (utility that allows you to discover other ip addresses or hosts on a local network by sending ARP requests and determining whether device is online/offline or on the network/off). From there, I can see the actual arp packet details which include the type of request, hardware type, etc.
 <img width="877" alt="Screenshot 2024-07-15 at 3 54 25 PM" src="https://github.com/user-attachments/assets/a0ec6dfe-d547-4179-a303-44f01ff71af4">
 <img width="1251" alt="Screenshot 2024-07-15 at 4 02 15 PM" src="https://github.com/user-attachments/assets/ab1c35e3-5de8-44a3-8f54-274dde8a12b3">
+</p> I can also use the display filter to specify specific ip ranges and destination port numbers. </p> 
+<img width="1217" alt="Screenshot 2024-07-15 at 4 17 27 PM" src="https://github.com/user-attachments/assets/9370b66a-5804-40b9-9caa-57798e4e235a">
+</p> As an example, if I want to analyze what happened on a network and identify injections via malicious documents that came through a particular website/attachment, I can use the following display filter: </p>
+<img width="1213" alt="Screenshot 2024-07-15 at 4 26 49 PM" src="https://github.com/user-attachments/assets/d6700453-5fca-4e66-8c9b-034a2d6d9ea0">
+</p> You can also filter based on mac address using the following:</p>
+<img width="1282" alt="Screenshot 2024-07-15 at 4 32 15 PM" src="https://github.com/user-attachments/assets/35bc863e-21ad-4a4b-b6ef-34f3f76dc6aa">
+</p> Filtering based on specific protocols is also possible. I have a vulnerable linux server running ftp within the same subnet. I run ftp along with the target ip address and port number (21). I connect and purposely enter the incorrect credentials.
+<img width="737" alt="Screenshot 2024-07-16 at 2 34 41 PM" src="https://github.com/user-attachments/assets/ba8a7da2-6d09-4de4-a273-31fa6eb129ce">
+</p> If I head back into Wireshark, I can filter to show FTP packets. Because FTP is not encrypted, the passwords can be identified in the details. This method is important because we can identify BRUTE FORCE attacks whereby an attacker is trying to gain access.
+<img width="1239" alt="Screenshot 2024-07-16 at 2 39 48 PM" src="https://github.com/user-attachments/assets/7b986756-c628-4744-a785-bbac8740fc21">
 
 </p> I can also configure capture filters, using logical operators to combine multiple filters together. For the below example, I am configuring the filter where the source ip address is set to my ubuntu ip, and the type of packet is icmp </p> 
 <img width="1202" alt="Screenshot 2024-07-14 at 7 32 14 PM" src="https://github.com/user-attachments/assets/bbcbd72d-053b-4253-8956-f3d228bbbd32">
