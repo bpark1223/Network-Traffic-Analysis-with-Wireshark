@@ -1,5 +1,5 @@
 # Network-Traffic-Analysis-with-Wireshark
-<p>Network traffic analysis is a crucial part of cybersecurity. Wireshark is a popular network protocol analyzer used to capture and analyze network traffic, which I will do in this project. I will play around with and configure display/capture filters  </p>
+<p>Network traffic analysis is a crucial part of cybersecurity. Wireshark is a popular network protocol analyzer used to capture and analyze network traffic, which I will do in this project. I will play around with and configure display/capture filters.  </p>
 <h2>Utilities Used</h2>
 </p>- Ubuntu </p>
 </p>- UTM VM setup </p>
@@ -34,7 +34,10 @@
 <img width="737" alt="Screenshot 2024-07-16 at 2 34 41 PM" src="https://github.com/user-attachments/assets/ba8a7da2-6d09-4de4-a273-31fa6eb129ce">
 </p> If I head back into Wireshark, I can filter to show FTP packets. Because FTP is not encrypted, the passwords can be identified in the details. This method is important because we can identify BRUTE FORCE attacks whereby an attacker is trying to gain access.
 <img width="1239" alt="Screenshot 2024-07-16 at 2 39 48 PM" src="https://github.com/user-attachments/assets/7b986756-c628-4744-a785-bbac8740fc21">
-
+</p> <img width="1255" alt="Screenshot 2024-07-16 at 3 32 30 PM" src="https://github.com/user-attachments/assets/c8ba401c-e3c7-45e4-a171-23b2863c8c25">
+</p> I can also explore SSH traffic between my two machines with the following: </p>
+<img width="734" alt="Screenshot 2024-07-16 at 3 31 05 PM" src="https://github.com/user-attachments/assets/143510dc-9c91-4af5-bcc0-33a273a084e6">
+</p> The encrypted packets can now be viewed in Wireshark. Unlike, ftp, unless we have the SSH key pair, we cannot decrypt these packets. 
 </p> I can also configure capture filters, using logical operators to combine multiple filters together. For the below example, I am configuring the filter where the source ip address is set to my ubuntu ip, and the type of packet is icmp </p> 
 <img width="1202" alt="Screenshot 2024-07-14 at 7 32 14 PM" src="https://github.com/user-attachments/assets/bbcbd72d-053b-4253-8956-f3d228bbbd32">
 </p> To test that the packets are being captured, I perform a ping (ping uses icmp protocol) from my terminal on google.com. The packets are now visible in Wireshark. </p>
